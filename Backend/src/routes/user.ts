@@ -42,7 +42,7 @@ userRouter.post('/signup', async (c) => {
 
     } catch (e) {
         console.log(e)
-        c.status(411)
+        c.status(422)
         return c.text('User already exists')
 
     }
