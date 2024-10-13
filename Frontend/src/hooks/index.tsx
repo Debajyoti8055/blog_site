@@ -19,8 +19,6 @@ export const useBlog = ({ id }: { id: string }) => {
     const [blog, setBlog] = useState<Blog>()
 
     useEffect(() => {
-        const token = localStorage.getItem("token")
-        console.log("Token:", token)
         axios.get(`${BACKEND_URL}/api/v1/blog/${id}`, {
             method: "GET",
             headers: {
